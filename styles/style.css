@@ -1,0 +1,541 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/*These rules make  code cross-browser compatible*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*-----------------Webpage styling starts here---------------*/
+/*form{
+    border: 3px dashed red;
+}body*/
+
+/*h4{
+    border: 1px dashed black;
+}*/
+/*h3{
+    border: 1px dashed black;
+}*/
+/*div{
+    border: 1px solid black;
+}*/
+/*span{
+    border: 1px dashed black;
+}*/
+body {
+    top: 0;
+    min-width: 1050px;/*based on min-width of #companyInfo;it has max min-width*/
+    /*position: fixed;
+    margin-left: 1%;
+    margin-right: 0%;*/
+    box-shadow: #000 0px 0px 900px;
+    height: 98%;
+    font-size:22px;
+    font-weight:bold;
+}
+header {
+    /*min-width: 1100px;*/
+    background-color: blue;/*#16F;*/
+    /*background: rgba(0, 0, 0, .1);*/
+    padding: 9px;
+    padding-top: 25px;
+    box-shadow: inset #000 0px 1px 2px;
+    /*font-size:14px;class diff from header*/
+    height: 70px;/*8%;*/
+}
+/*-----Quiz Header-----*/
+#quizHeader{
+    border-radius:5px;
+    width: inherit;
+    height: inherit;
+    margin-top:-20px;
+    text-align:center;
+  }
+#quizHeaderName{
+    /*font-size: 40px;
+    vertical-align: middle;*/
+    color: white;
+    font-size:50px;
+    font-weight: bold;
+    display:block;
+    margin:0;
+    padding: 0;
+    margin-top:-0px;
+ }
+ #quizHeaderPhrase{
+    /*color: black;
+    font-size: 20px;*/
+    color: white;
+    font-weight: bold;
+    display:block;
+    margin:0;
+    padding: 0;
+    font-size: 20px;
+ }
+  #quizLogo{
+  	height: inherit;
+  	float:left;
+ }
+ 
+/*-----Overlay Sections-----*/
+#quizBody h2{
+    text-align:center;
+    font-size:40px;
+    margin: 10px;
+    padding: 10px;
+    border: 10px;
+}
+#quizBody h3{
+    text-align:left;
+    font-size:30px;
+}
+#quizBody ul{
+     font-size:20px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 10px;
+    line-height: 35px;
+    text-indent:40px;
+}
+
+#quizBody section,
+#quizBody section:target ~ section {
+   display: none;
+   background-color: brown;
+}
+
+#quizBody section:target,
+#quizBody section:last-child {
+    position: relative;
+    display: block;
+    clear: left;
+    margin: 0 1%;
+    min-width: 800px;/*   for show only */
+    height: 700px;/**/
+    border: 1px solid black; 
+    border: 5px solid orange;  
+    z-index: 1;
+    padding: 10px;
+    background-color: red;
+    background: rgba(0, 0, 0, .1);
+        padding:0;
+    margin:0;
+    border:0;
+    border: 5px solid orange;
+    /*overflow:auto;*/
+}
+#nav {
+     position: relative;
+    z-index: 2;
+    margin: 10px .5em 0;
+}
+#nav li {
+    width: 9em;
+    text-align: center;
+    float: left;
+}
+
+.tabContent{
+    position:absolute;
+    padding:0;
+    margin:0;
+    border:0;
+    background-color: inherit;
+    width:inherit;
+    overflow:auto;/**/
+    top: -5px;
+}
+
+        /*-----Background and Instructions-----*/
+/*div{
+    border: 5px dashed black;
+    background-color: red;
+}*/
+
+#tabSelect1{ /* set for tab 1 */
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 7em;
+    height: 2.0em;
+    position: absolute;
+    top: -2.25em;
+    left: 2em;
+    border: 5px solid orange;
+    border-bottom: transparent;
+    background-color: inherit;
+    margin-top: -2px; /* top border height */
+    margin-left: 0px; /* left border width */
+    text-align:center;
+}
+ #tab1Text{
+    text-decoration: none;
+ }
+ #tab1Text:hover {
+    color:white;
+    background-color: gray
+ }   
+#tab1 ul{
+    list-style-type: decimal;
+    list-style-position: inside;
+    /*white-space: pre-wrap;*/
+}
+
+#tab1 ul li{
+	text-indent : -2em;
+  	margin-left :  2em;/**/
+}
+
+#bckGround{
+    border: 3px solid green;
+    margin-bottom: 10px;
+  }
+ #instructions{
+    border: 3px solid brown;
+  }
+#tab1TextB a{
+    text-decoration: none;
+  }
+#tab1TextB{
+    text-decoration: none;
+    text-align:center;
+    max-width: 20em;
+    margin-left: 400px;
+    height: 2.0em;
+    border-radius: 10px;
+  }
+ #tab1TextB:hover {
+    color:white;
+    background-color: gray;
+ }
+
+ /*-----Quiz Question and Feedback-----*/
+#tabSelect2{ /* set for tab 2 */
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 7em;
+    height: 2.0em;
+    position: absolute;
+    top: -2.25em;
+    left: 10.2em;
+    border: 5px solid orange;
+    border-bottom: transparent;
+    background-color: inherit;
+    margin-top: -2px; /* top border height */
+    margin-left: 0px; /* left border width */
+    text-align:center;
+}
+#tab2Text{
+    text-decoration: none;
+ }
+ #tab2Text:hover {
+    color:white;
+    background-color: gray;
+ }
+ #quiz {
+    border: 3px solid green;
+ }
+ #quizQ {
+ 	height:50px;
+ 	font-size:30px;
+    width: 20em;
+ }
+#quizQNum{
+    font-size:40px;
+    width: 2em;
+    height:40px;
+    margin:10px;
+    color:red;
+}
+
+input{
+    position: relative;
+    display: inline-block;
+    margin-bottom:10px;
+    font-size: 20px;
+    height:32px;
+    width: 3em;
+    margin-left:30px;
+}/**/
+
+#submitAns{
+	width: 9em;
+     margin-top:40px;
+     border-radius: 10px;
+     font-size:30px;
+     text-align:center;
+     margin-left:0em;
+     background-color:gray;
+  }
+#submitAns:hover{
+     background-color:green;
+  }
+#nextQ{
+	float:right;
+	width: 7em;
+     margin-top:40px;
+     border-radius: 10px;
+     font-size:30px;
+     text-align:center;
+     background-color:gray;
+     text-decoration: none;
+}
+#nextQ:hover{
+	background-color:blue;
+}
+
+ #Feedback{
+ 	border: 3px solid brown;
+ 	margin-top:10px;
+    position: relative;
+    margin-bottom: 10px;
+    /*text-align:center;*/
+    height:280px;
+ }
+ #inProgressFB{
+}
+ #Feedback div{
+    margin-top:10px;
+    height:150px;
+    text-align: center;
+ }
+ #corIncor{
+ 	background-color: gray;
+ 	margin-left: 12em;
+    font-size:40px;
+    width: 4em;
+    height:40px;
+    color:blue;
+}
+ #Feedback div img{
+    height:inherit;
+    width: 10em;
+}
+#Feedback div h4{
+    margin-bottom: 20px;
+}
+
+#respImage {
+	margin-top: -50px;
+     float:left;   
+}
+#corResp{
+	margin-left: -4em;
+	/*margin-top: -10px; I1:Can't adjust*/
+    height:50px;
+    font-size: 30px;
+    width: 17em;
+    text-align:center;/**/
+}
+#numCorResp{
+	margin-top: -5px;
+	margin-left: 2em;
+	height:50px;
+    font-size: 40px;
+    width: 1.5em;
+    color: blue;
+    /*float:right;*/
+}
+
+/*-----Quiz Results-----*/
+#tabSelect3{ /* set for tab 3 */
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 7em;
+    height: 2.0em;
+    position: absolute;
+    top: -2.25em;
+    left: 18.5em;
+    border: inherit;/*5px solid orange;*/
+    border-bottom: transparent;
+    background-color: inherit;
+    margin-top: -2px; /* top border height */
+    margin-left: 0px; /* left border width */
+    text-align:center;
+}
+#tab3Text{
+    text-decoration: none;
+ }
+ #tab3Text:hover {
+    color:white;
+    background-color: gray;
+ }
+
+#tab3 ul{
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+#tab3 ul{
+     text-align:center;
+}
+#tab3 h3 {
+    text-align:center;
+ }/**/
+
+#infoOnQuestions{
+    margin-bottom: 10px;
+    border: 3px solid green;
+ }
+ #infoOnQuestions h5{
+    font-size: 30px;
+ }
+ #infoOnQuestions a{
+	font-size:20px;
+}
+#infoOnQuestions h3{
+	margin-bottom: 20px
+}
+#infoOnQuestions span{
+	color: blue;
+}
+#infoOnQuestions a{
+	margin-left: 20px
+}
+#quizResult{
+    border: 3px solid brown;
+    margin-bottom: 10px;
+    height:100px;
+  }
+ #quizResult h4{
+    font-size: 30px;
+    margin-top:20px;
+    margin-left: 8em;
+    width: 20em;
+ }
+#numCorRespR{
+    font-size:40px;
+    height:40px;
+    margin-left: 2em;
+    color:blue;
+}
+#reTakeQuiz a{
+    text-decoration: none;
+    color:white;
+    /*margin-top:0px;*/
+    /*padding-bottom: 0px;*/
+    /*border-bottom:0px;*/
+  }
+#reTakeQuiz{
+	background-color:green;
+    text-decoration: none;
+    text-align:center;
+    max-width: 15em;
+    margin-left: 10em;
+    height: 1.2em;
+    font-size: 30px;
+    border-radius: 10px;
+  }
+ #reTakeQuiz:hover {
+    color:white;
+    background-color: gray;
+ }
+
+
+
+/*--------------Footer -----------------------------*/
+/*footer *{
+    border: 1px dashed black;
+    border-radius: 10px;
+}*/
+
+footer {
+     /*position: fixed;
+     border: 1px dashed black;
+    min-width: 1200px;*/
+    background-color: #16F;
+    background: rgba(0, 0, 0, .3);
+    padding: 9px;
+    padding-top: 25px;
+    box-shadow: inset #000 0px 1px 2px;
+    font-size:16px;/*Frm here, diff from header*/
+    margin-top:0px;
+    height: 25px;s
+    border-radius: 0, 0;
+ }
+
+ #companyInfo{
+    position: relative;
+    float: left;
+    /*min-width: 1050px;inherit;
+    height: inherit;*/
+    margin-left: .5%;
+    text-align:left;/*right;*/
+ }
+   .coInfo1{
+    position: relative;
+    display:inline-block;
+    margin-top:0px;
+    margin-right:11px;
+    margin-left:11px;
+ }
+ #coEmail{
+    /*position: relative;
+    display:inline-block;
+    margin-top:0px;*/
+    color:black;
+    margin-right:15px;
+    margin-left:11px;
+    text-decoration: none;
+ }
+ #coEmail:hover {
+    text-decoration: underline;
+}/**/
+ 
+ .coInfo2{
+    /*position: relative;
+    display:inline-block;
+    margin-top:0px;*/
+    margin-right:0px;
+    margin-left:35px;
+    text-decoration: none;
+ }
+ .coInfo2:hover {
+    text-decoration: underline;
+ }
+
+
+
+
+

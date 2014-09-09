@@ -1,0 +1,138 @@
+<!doctype html>
+    <html>
+    <head>
+    <meta charset="utf-8">
+    <title>Health-Tests Quiz</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	
+    </head>
+
+    <body>
+    <header >
+      <div id="quizHeader">
+        <img id="quizLogo" src="images/H-MIBa.jpg"><!---->
+        <h1 id="quizHeaderName">Health-Examination Quiz</h1>
+        <h4 id="quizHeaderPhrase">Good Health to you!</h4>
+      </div>
+    </header>
+
+    <section id="quizBody">
+      <ul id="nav">
+       <li><a id="tab1Text" href="#tab1">Introduction</a></li>
+       <li><a id="tab2Text" href="#tab2">Take Quiz</a></li>
+       <li><a id="tab3Text" href="#tab3">Quiz Results</a></li>
+      </ul>
+
+      <section id="tab2">
+        <div id="tabSelect2"></div>
+        <section class="tabContent"> 
+        
+        <form id="quiz">
+        		<h2 id="quizH">Quiz</h2>
+				<div><span id="quizQNum"></span><span id="quizQ">Click Take Quiz tab to start quiz</span> </div>
+				
+				<input id="ans0" type="radio" name="Ans" value="0"><label class="ans0">Response 1</label><br>
+
+				<input id="ans1" type="radio" name="Ans" value="1"><label class="ans1">Response 2</label><br>
+
+				<input id="ans2" type="radio" name="Ans" value="2"><label class="ans2">Response 3</label><br>
+
+				<input id="ans3" type="radio" name="Ans" value="3"><label class="ans3">None of the above</label><br>
+
+             	<strong><input id="submitAns" type="submit" name="submit" value="Submit Response"></strong>
+             	<a id="nextQ" href="#tab2">Next Question</a>
+         </form>
+         <div id="Feedback"> <!--use "feedBack"-->
+         	<h2 id="inProgressFB">Feedback</h2>
+         	<div>
+         		<h4 id="corIncor"></h4>
+         		<!--<h4 id="correct">Take Quiz</h4>-->
+              	<img id="respImage" src="">
+              	<!--<span id="respImage"></span>-->
+              	<span id="corResp">Number of correct responses, so far:</span>
+              	<span id="numCorResp">0</span>
+
+         	</div>
+         </div>
+    
+        </section>
+      </section>
+      <section id="tab3">
+        <div id="tabSelect3"> </div> 
+        <section class="tabContent">
+        <h2>Quiz Results </h2>
+ 
+        <div  id="infoOnQuestions">
+        	<h3 id="quizQ0">Question 1</h3>
+        	<h5>Your response is <span id="corIncor0"></span></h5>
+        	<a id="ref0" href="">See this reference for more info</a>
+        	
+        	<h3 id="quizQ1">Question 2</h3>
+        	<h5>Your response is <span id="corIncor1"></span></h5>
+        	<a id="ref1" href="">See this reference for more info</a>
+        	
+        	<h3 id="quizQ2">Question 3</h3>
+        	<h5>Your response is <span id="corIncor2"></span></h5>
+        	<a id="ref2" href="">See this reference for more info</a>
+        	
+        	<h3 id="quizQ3">Question 4</h3>
+        	<h5>Your response is <span id="corIncor3"></span></h5>
+        	<a id="ref3" href="">See this reference for more info</a>
+        </div>
+        <h2 id:"noQuizResult"></h2>
+        <div id="quizResult"> 
+           	<!--<span id="corRespR">Number of correct responses</span>
+           	<span id="numCorRespR">3</span><span>of 4</span>-->
+           	<h4>Number of correct responses out of 4<span id="numCorRespR">0</span></h4>
+         </div> 
+         <div id="reTakeQuiz"><a  href="#tab2">Take Quiz</a></div>     
+        </section>
+      </section>
+
+      <section id="tab1">
+        <div id="tabSelect1"></div>
+        <section class="tabContent"> 
+        
+        <div id="bckGround">
+        	<h2>Background</h2> 
+	        <p>Here are some health concerns about routine medical checkups:</p>
+	        <ul>
+	          <li> The lower limit of the Vitamin D range (20-30ng/mL 25-hydroxy D) on routine blood tests panels most probably does not promote good health</li>
+	          <li> Tests for levels of Hc, Lp(a), and C-RP are generally missing </li>
+	          <li> The upper limit of Fasting insulin (~15uU/ml), which is generally considered safe could be too high. </li>
+	          <li> If Fasting glucose level is normal (<=99mg/dl), the Fasting insulin level and glucose-to-insulin ratio aren't normally checked.</li>
+	          <li> The more recently proposed HbA1c level (<=5.5%) for good health is not generally checked or used.</li>
+	        </ul> 
+        </div>
+        <div id="instructions">
+	        <h2>Quiz Instructions</h2>
+	        <ul>
+	          <li>To take the quiz, click on the the Take Quiz tab.</li> 
+	          <li>Select the radio button next to the corrct response.</li>
+	          <li>Click on the Submit Response button.</li>
+	          <li>Watch your progress in Feedback section (If all questions correct, then Ryu shouts).</li>
+	          <li>At end of answering all questions, click on Quiz Results.</li>
+	        </ul>
+        </div>
+        <!--<div id="tab1TextB"><a  href="#tab2">Take Quiz</a></div>-->
+        </section>
+      </section>
+	</section>
+	  
+    <footer>
+      <div id="companyInfo">
+        <p class="coInfo1">Home-Made ImmuneBooster</p>
+        <p class="coInfo1">1234 Health Lane, City, State</p>
+        <p class="coInfo1">1-800-000-0000</p>
+        <a href="https://www.google.com/intl/en/about.html?fg=1" id="coEmail">
+        H-MIB@Health.com</a>
+        <a href="https://www.google.com/preferences?hl=en" class="coInfo2">About</a>
+        <a href="https://www.google.com/intl/en/policies/?fg=1" class="coInfo2">Privacy & Terms</a>
+      </div>
+    </footer>
+	<audio id="hadouken-sound" src="sound/hadouken.mp3">
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
