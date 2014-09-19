@@ -85,6 +85,16 @@ header {
     /*font-size:14px;class diff from header*/
     height: 70px;/*8%;*/
 }
+input{
+    position: relative;
+    display: inline-block;
+    margin-bottom:10px;
+    font-size: 20px;
+    height:32px;
+    width: 3em;
+    margin-left:30px;
+}/**/
+
 /*-----Quiz Header-----*/
 #quizHeader{
     border-radius:5px;
@@ -194,6 +204,67 @@ header {
     border: 5px dashed black;
     background-color: red;
 }*/
+ /*#tab4 *{
+    border: 1px dashed black;
+}*/
+#tab4 ul li{
+    text-indent : -.5em;
+    margin-left :  1em;/**/
+}
+#tab4Text{
+    text-decoration: none;
+ }
+ #tab4Text:hover {
+    color:white;
+    background-color: red;
+ }
+ .trendInstruction li{
+    font-size:15px;
+    line-height: 1.5em;
+ }
+ .notes{
+     font-size:13px;
+ }
+ .uL1Container{
+    height:6.5em;
+ }
+  .formContainer{
+    text-align:center;
+    background-color: rgb(100,00,100);
+}
+.tableContainer{
+    text-align:center;
+}
+.getData{
+    width: 5em;
+    margin-left: 0;
+    height:1.3em;
+}
+.trendInput select{
+    margin-top: 10px;
+    height:4.75em;
+}
+.getData:hover{
+     background-color:green;
+  }
+.trendTable {
+    text-align:center;
+    width:35em;
+    margin:auto;
+}
+.trendHeader th{
+    width: 6em;
+    margin-left: 1em;
+    background-color: rgb(170,00,170);
+}    
+.trendData {
+    border: 1px dashed black;
+    background-color: rgb(250,00,250);
+}
+
+.hidden {
+    display: none;
+}
 
 #tabSelect1{ /* set for tab 1 */
     border-top-right-radius: 10px;
@@ -227,7 +298,10 @@ header {
 	text-indent : -2em;
   	margin-left :  2em;/**/
 }
-
+#bckGround p{
+    white-space: pre-wrap;
+    margin-left :  1em;
+}
 #bckGround{
     border: 3px solid green;
     margin-bottom: 10px;
@@ -279,26 +353,16 @@ header {
  }
  #quizQ {
  	height:50px;
- 	font-size:30px;
+ 	font-size:23px;
     width: 20em;
  }
 #quizQNum{
-    font-size:40px;
+    font-size:25px;
     width: 2em;
     height:40px;
     margin:10px;
     color:red;
 }
-
-input{
-    position: relative;
-    display: inline-block;
-    margin-bottom:10px;
-    font-size: 20px;
-    height:32px;
-    width: 3em;
-    margin-left:30px;
-}/**/
 
 #submitAns{
 	width: 9em;
@@ -343,7 +407,7 @@ input{
  }
  #corIncor{
  	background-color: gray;
- 	margin-left: 12em;
+ 	margin: auto;/*12em*/
     font-size:40px;
     width: 4em;
     height:40px;
@@ -462,7 +526,7 @@ input{
     text-decoration: none;
     text-align:center;
     max-width: 15em;
-    margin-left: 10em;
+    margin:auto;/*margin-left: 10em;*/
     height: 1.2em;
     font-size: 30px;
     border-radius: 10px;

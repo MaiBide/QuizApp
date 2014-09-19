@@ -2,10 +2,10 @@
     <html>
     <head>
     <meta charset="utf-8">
-    <title>Health-Tests Quiz</title>
+    <title>2014 API Hack</title>
 
     <link rel="stylesheet" href="styles/style.css">
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
 	
     </head>
 
@@ -13,8 +13,8 @@
     <header >
       <div id="quizHeader">
         <img id="quizLogo" src="images/H-MIBa.jpg"><!---->
-        <h1 id="quizHeaderName">Health-Examination Quiz</h1>
-        <h4 id="quizHeaderPhrase">Good Health to you!</h4>
+        <h1 id="quizHeaderName">Stack Overflow API Hack</h1>
+        <h4 id="quizHeaderPhrase">Follow the trend!</h4>
       </div>
     </header>
 
@@ -23,8 +23,94 @@
        <li><a id="tab1Text" href="#tab1">Introduction</a></li>
        <li><a id="tab2Text" href="#tab2">Take Quiz</a></li>
        <li><a id="tab3Text" href="#tab3">Quiz Results</a></li>
+       <li><a id="tab4Text" href="#tab4">Interest Trend</a></li>
       </ul>
-
+      
+      <section id="tab4">
+        <div id="tabSelect4"></div>
+        <section class="tabContent"> 
+        <h2>Programming-Interest Trend</h2>
+        <div class="uL1Container">
+          <h4></h4>
+          <ul class="trendInstruction">
+            <li>The following table indicates the interest trend of programmers over a selected period of time. The trend is based on the total questions reported by Stack Overflow from it's millions of internatioal subscribers.</li>
+            <li>How to use: Select a range of languages (use cmd, Ctrl or Shift key) plus a single year; or a range of years and a single language.</li>
+           <li>Note: <p class="notes"> 1) In the table, Interest Level is the number of questions reported for the selection. A "-502" means that the number of allowed requests to the server has been exceeded for the day! 2) The data for 2014 is not for a complete 12 months; its just for upto the current date.</p></li>
+           </ul>
+        </div>
+        <div class="formContainer">
+          <form class="trendInput" onsubmit="return false;">
+            <select name="lang" size="1" autofucus required multiple>
+              <option value="select" selected disabled>Select Lang</option>
+              <option value="C++">C++</option>
+              <option value="c#">C#</option>
+              <option value="c">C</option>
+              <option value=".net">.net</option>
+              <option value="o-c">Ojective-C</option>
+              <option value="swift">Swift</option>
+              <option value="java">Java</option>
+              <option value="html">HTML</option>
+              <option value="xml">XML</option>
+              <option value="xgml">XGML</option>
+              <option value="json">JSON</option>
+              <option value="jsonp">JSONP</option>
+              <option value="javascript">JavaScript</option>
+              <option value="python">Python</option>
+              <option value="php">PHP</option>
+              <option value="ruby">Ruby</option>
+              <option value="perl">Perl</option>
+              <option value="windowsM">WindowsMobile</option>
+              <option value="OSX">OSX</option>
+              <option value="ios">iOS</option>
+              <option value="android">Android</option>
+              <option value="blackberry">Blackberry</option>
+            </select>
+            <select name="period" size="1" required multiple>
+              <option value="select" selected disabled>Select Period</option>
+              <option value="2009">2009</option>
+              <option value="2010">2010</option>
+              <option value="2011">2011</option>
+              <option value="2012">2012</option>
+              <option value="2013">2013</option>
+              <option value="2014">2014</option>
+              <!--<option value="all">all</option>-->
+            </select>
+            <!--<select name="subPeriod" size="1" required>
+              <option value="select" selected disabled>Select</option>
+              <option value="quarter">2010</option>
+              <option value="6mth">6mth</option>
+            </select>-->
+            <input class="getData" type="submit" value="Submit">
+        </div>
+        <div  class="tableContainer">
+          <table  class="trendTable">
+              <tr class="trendHeader"> 
+                <th>Lang or OS</th> 
+                <th>Interest Level</th> 
+                <!--<th># of Views</th>
+                <th>Sub Period</th>-->
+                <th>Period</th>
+              </tr>
+              
+          </table>
+        </div>
+        <!--Hidden Template of data record>-->
+        <div class="templates hidden">
+          <table class="test">
+          <tr class="trendData"> 
+              <td class="lang">Lang/OS</td> 
+              <td class="numQs"># of Qs</td>
+              <!--<td class="numViews"># of Views</td>
+              <td class="subPeriod">Sub Period</td>-->
+              <td class="period">Period</td>
+          </tr>
+          </table>
+          <div class="error">
+            <p>There is an error in the request! This is what is known:</p>
+          </div>
+        </div>
+        </section>
+      </section>
       <section id="tab2">
         <div id="tabSelect2"></div>
         <section class="tabContent"> 
@@ -87,7 +173,7 @@
            	<span id="numCorRespR">3</span><span>of 4</span>-->
            	<h4>Number of correct responses out of 4<span id="numCorRespR">0</span></h4>
          </div> 
-         <div id="reTakeQuiz"><a  href="#tab2">Take Quiz</a></div>     
+         <div id="reTakeQuiz"><a  href="#tab2">Take Another Quiz</a></div>     
         </section>
       </section>
 
@@ -97,23 +183,19 @@
         
         <div id="bckGround">
         	<h2>Background</h2> 
-	        <p>Here are some health concerns about routine medical checkups:</p>
-	        <ul>
-	          <li> The lower limit of the Vitamin D range (20-30ng/mL 25-hydroxy D) on routine blood tests panels most probably does not promote good health</li>
-	          <li> Tests for levels of Hc, Lp(a), and C-RP are generally missing </li>
-	          <li> The upper limit of Fasting insulin (~15uU/ml), which is generally considered safe could be too high. </li>
-	          <li> If Fasting glucose level is normal (<=99mg/dl), the Fasting insulin level and glucose-to-insulin ratio aren't normally checked.</li>
-	          <li> The more recently proposed HbA1c level (<=5.5%) for good health is not generally checked or used.</li>
-	        </ul> 
+	        <p>The purpose of this web app is to allow you to explore the past and current trends in computer programming interests. By browsing through a number of questions asked by an international group of programming learners and professionals, one can get a feel of the direction or trends of interest in computer programming languages and OSs.</p><br>
+
+          <p>Stack Overflow's website is a good location for exploring such trends. "It features questions and answers on a wide range of topics in computer programming. The website serves as a platform for users to ask and answer questions....As of April 2014, Stack Overflow has over 2,700,000 registered users and more than 7,100,000 questions." (Wipedia, Stack Overflow)</p><br> 
+
+          <p>This App, in a fairly cursory but useful way, allows you to test your knowledge about the trend  of a diverse, and technical computer programming audience. This knowledge, in turn, could, perhaps, in a small way, help you to make carreer related decisions.</p><br>
+	        
+          <p>You could explore the current and past trends in programming by first taking the 4-question quiz (click Take Quiz tab), then explore the answers by looking at the trend data under the Interest Trend tab. (Currntly, only one quiz in pool; this is expected to increase.)</p><br>
         </div>
         <div id="instructions">
 	        <h2>Quiz Instructions</h2>
 	        <ul>
 	          <li>To take the quiz, click on the the Take Quiz tab.</li> 
-	          <li>Select the radio button next to the corrct response.</li>
-	          <li>Click on the Submit Response button.</li>
-	          <li>Watch your progress in Feedback section (If all questions correct, then Ryu shouts).</li>
-	          <li>At end of answering all questions, click on Quiz Results.</li>
+	          <li>To skip quiz and start exploring the programing trend, click Interest Trend tab</li>
 	        </ul>
         </div>
         <!--<div id="tab1TextB"><a  href="#tab2">Take Quiz</a></div>-->
@@ -123,11 +205,11 @@
 	  
     <footer>
       <div id="companyInfo">
-        <p class="coInfo1">Home-Made ImmuneBooster</p>
-        <p class="coInfo1">1234 Health Lane, City, State</p>
+        <p class="coInfo1">Web Front-End Architect</p>
+        <p class="coInfo1">1234 Web Lane, City, State</p>
         <p class="coInfo1">1-800-000-0000</p>
         <a href="https://www.google.com/intl/en/about.html?fg=1" id="coEmail">
-        H-MIB@Health.com</a>
+        info@WFEA.com</a>
         <a href="https://www.google.com/preferences?hl=en" class="coInfo2">About</a>
         <a href="https://www.google.com/intl/en/policies/?fg=1" class="coInfo2">Privacy & Terms</a>
       </div>
